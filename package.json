@@ -8,6 +8,7 @@
   "scripts": {
     "codegen:blocks": "graph codegen subgraphs/blocks.yaml",
     "codegen:exchange": "graph codegen subgraphs/exchange.yaml",
+    "codegen:farm-auctions": "graph codegen subgraphs/farm-auctions.yaml",
     "codegen:lottery": "graph codegen subgraphs/lottery.yaml",
     "codegen:pairs": "graph codegen subgraphs/pairs.yaml",
     "codegen:prediction": "graph codegen subgraphs/prediction.yaml",
@@ -17,6 +18,7 @@
     "codegen:trading": "graph codegen subgraphs/trading.yaml",
     "build:blocks": "graph build subgraphs/blocks.yaml",
     "build:exchange": "graph build subgraphs/exchange.yaml",
+    "build:farm-auctions": "graph build subgraphs/farm-auctions.yaml",
     "build:lottery": "graph build subgraphs/lottery.yaml",
     "build:pairs": "graph build subgraphs/pairs.yaml",
     "build:prediction": "graph build subgraphs/prediction.yaml",
@@ -26,6 +28,7 @@
     "build:trading": "graph build subgraphs/trading.yaml",
     "deploy:blocks": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/blocks subgraphs/blocks.yaml",
     "deploy:exchange": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/exchange subgraphs/exchange.yaml",
+    "deploy:farm-auctions": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/farm-auctions subgraphs/farm-auctions.yaml",
     "deploy:lottery": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/lottery subgraphs/lottery.yaml",
     "deploy:pairs": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/pairs subgraphs/pairs.yaml",
     "deploy:prediction": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/prediction subgraphs/prediction.yaml",
