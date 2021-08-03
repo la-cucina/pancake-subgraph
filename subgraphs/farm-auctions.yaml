@@ -8,9 +8,9 @@ dataSources:
     name: FarmAuction
     network: bsc
     source:
-      address: '0x000000000000000000000000000000000000dEaD'
+      address: '0xb92Ab7c1edcb273AbA24b0656cEb3681654805D2'
       abi: FarmAuction
-      startBlock: 4570433
+      startBlock: 9678443
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
