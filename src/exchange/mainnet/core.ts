@@ -8,12 +8,13 @@ import {
   Mint as MintEvent,
   Burn as BurnEvent,
   Swap as SwapEvent,
+  LPTransferEntity as TransferEvent,
   Bundle,
-} from "../../generated/schema";
-import { Mint, Burn, Swap, Transfer, Sync } from "../../generated/templates/Pair/Pair";
+} from "../../../generated/schema";
+import { Mint, Burn, Swap, Transfer, Sync } from "../../../generated/templates/Pair/Pair";
 import { updatePairDayData, updateTokenDayData, updatePancakeDayData, updatePairHourData } from "./dayUpdates";
 import { getBnbPriceInUSD, findBnbPerToken, getTrackedVolumeUSD, getTrackedLiquidityUSD } from "./pricing";
-import { convertTokenToDecimal, ADDRESS_ZERO, FACTORY_ADDRESS, ONE_BI, ZERO_BD, BI_18 } from "./utils";
+import { convertTokenToDecimal, ADDRESS_ZERO, FACTORY_ADDRESS, ONE_BI, ZERO_BD, BI_18 } from "./utils/index";
 
 function isCompleteMint(mintId: string): boolean {
   return MintEvent.load(mintId).sender !== null; // sufficient checks
@@ -157,6 +158,18 @@ export function handleTransfer(event: Transfer): void {
     transaction.burns = burns;
     transaction.save();
   }
+
+  let transferEntity = new TransferEvent(event.transaction.index.toHex() + "_" + event.transaction.hash.toHex());
+
+  // assign event data to transfer entity
+  transferEntity.from = event.params.from;
+  transferEntity.tokenAddress = event.address;
+  transferEntity.to = event.params.to;
+  transferEntity.value = event.params.value;
+  transferEntity.timestamp = event.block.timestamp;
+
+  // save entity in store
+  transferEntity.save();
 
   transaction.save();
 }

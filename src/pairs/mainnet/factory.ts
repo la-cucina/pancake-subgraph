@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 import { BigInt } from "@graphprotocol/graph-ts";
-import { Factory, Pair, Token } from "../../generated/schema";
-import { PairCreated } from "../../generated/Factory/Factory";
+import { Factory, Pair, Token } from "../../../generated/schema";
+import { PairCreated } from "../../../generated/Factory/Factory";
 import { fetchTokenDecimals, fetchTokenName, fetchTokenSymbol } from "./utils/bep20";
 
 // Constants

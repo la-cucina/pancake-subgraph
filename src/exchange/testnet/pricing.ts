@@ -1,11 +1,11 @@
 /* eslint-disable prefer-const */
 import { BigDecimal, Address } from "@graphprotocol/graph-ts/index";
-import { Pair, Token, Bundle } from "../../generated/schema";
-import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from "./utils";
+import { Pair, Token, Bundle } from "../../../generated/schema";
+import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from "./utils/index";
 
-let WBNB_ADDRESS = "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c";
-let BUSD_WBNB_PAIR = "0x58f876857a02d6762e0101bb5c46a8c1ed44dc16"; // created block 589414
-let USDT_WBNB_PAIR = "0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae"; // created block 648115
+let WBNB_ADDRESS = "0x6de3a3de82a7aedca279b36db65a5b03b1a9f939";
+let BUSD_WBNB_PAIR = "0xe02dD9f6e09812021096e9460B2A2B52706e9100"; // created block 589414
+let USDT_WBNB_PAIR = "0xc39a3062ae9F706f7B556DeC50Edf38a1680a0E9"; // created block 648115
 
 export function getBnbPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
@@ -32,13 +32,13 @@ export function getBnbPriceInUSD(): BigDecimal {
 
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
-  "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", // WBNB
-  "0xe9e7cea3dedca5984780bafc599bd69add087d56", // BUSD
-  "0x55d398326f99059ff775485246999027b3197955", // USDT
-  "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", // USDC
-  "0x23396cf899ca06c4472205fc903bdb4de249d6fc", // UST
-  "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", // BTCB
-  "0x2170ed0880ac9a755fd29b2688956bd959f933f8", // WETH
+  "0x6de3a3de82a7aedca279b36db65a5b03b1a9f939", // WBNB
+  "0x593fA2BBC1eED5fC44458AAd8b367868c970f72F", // BUSD
+  "0x9a881b8363995eef5f0fa6c430625dcb39d31224", // USDT
+  "0x21E0be86c7DcAF49c66E0E3E3398E49bff3c0a41", // USDC
+  "0x0ff7FAB1f5326d3e91558E6D21A0B62C7D49FaB9", // UST
+  "0xC171a6bB0E02052063D059f65F4ea234D3DD2c02", // BTCB
+  "0x3860e4ed885062Acf891e831D149E771e12EeD6b", // WETH
 ];
 
 // minimum liquidity for price to get tracked

@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: PancakeSwap is a decentralized protocol for automated token exchange on Binance Smart Chain.
-repository: https://github.com/pancakeswap
+description: La Cucina redefines DeFi! In the mood for a Pancake ? Gain even more Yields in Pancake Swap through La Cucina.
+repository: https://github.com/la-cucina/pancake-subgraph
 schema:
   file: ./pairs.graphql
 dataSources:
@@ -15,7 +15,7 @@ dataSources:
       kind: ethereum/events
       apiVersion: 0.0.4
       language: wasm/assemblyscript
-      file: ../src/pairs/factory.ts
+      file: ../src/pairs/mainnet/factory.ts
       entities:
         - Factory
         - Pair

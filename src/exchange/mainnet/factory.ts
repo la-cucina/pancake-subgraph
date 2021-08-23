@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
-import { PancakeFactory, Pair, Token, Bundle } from "../../generated/schema";
-import { Pair as PairTemplate } from "../../generated/templates";
-import { PairCreated } from "../../generated/Factory/Factory";
+import { PancakeFactory, Pair, Token, Bundle } from "../../../generated/schema";
+import { Pair as PairTemplate } from "../../../generated/templates";
+import { PairCreated } from "../../../generated/Factory/Factory";
 import {
   FACTORY_ADDRESS,
   ZERO_BD,
@@ -10,7 +10,7 @@ import {
   fetchTokenSymbol,
   fetchTokenName,
   fetchTokenDecimals,
-} from "./utils";
+} from "./utils/index";
 
 export function handlePairCreated(event: PairCreated): void {
   let factory = PancakeFactory.load(FACTORY_ADDRESS);

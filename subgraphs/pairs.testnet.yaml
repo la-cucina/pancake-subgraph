@@ -1,0 +1,34 @@
+specVersion: 0.0.2
+description: La Cucina redefines DeFi! In the mood for a Pancake ? Gain even more Yields in Pancake Swap through La Cucina.
+repository: https://github.com/la-cucina/pancake-subgraph
+schema:
+  file: ./pairs.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Factory
+    network: chapel
+    source:
+      address: '0xe885AaeE6e0d794578A254852e705302E4266117'
+      abi: Factory
+      startBlock: 10951932
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ../src/pairs/testnet/factory.ts
+      entities:
+        - Factory
+        - Pair
+        - Token
+      abis:
+        - name: Factory
+          file: ../abis/Factory.json
+        - name: BEP20
+          file: ../abis/BEP20.json
+        - name: BEP20NameBytes
+          file: ../abis/BEP20NameBytes.json
+        - name: BEP20SymbolBytes
+          file: ../abis/BEP20SymbolBytes.json
+      eventHandlers:
+        - event: PairCreated(indexed address,indexed address,address,uint256)
+          handler: handlePairCreated

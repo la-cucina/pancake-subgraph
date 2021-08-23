@@ -1,4 +1,9 @@
-# PancakeSwap Subgraph
+# La Cucina | PancakeSwap Subgraph
+
+La Cucina redefines DeFi!
+In the mood for a Pancake ? Gain even more Yields in Pancake Swap through La Cucina.
+
+## PancakeSwap Subgraph
 
 TheGraph exposes a GraphQL endpoint to query the events and entities within the Binance Smart Chain and PancakeSwap ecosystem.
 

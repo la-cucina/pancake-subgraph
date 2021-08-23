@@ -1,9 +1,9 @@
 /* eslint-disable prefer-const */
 import { BigInt, BigDecimal, Address } from "@graphprotocol/graph-ts";
-import { BEP20 } from "../../../generated/Factory/BEP20";
-import { BEP20SymbolBytes } from "../../../generated/Factory/BEP20SymbolBytes";
-import { BEP20NameBytes } from "../../../generated/Factory/BEP20NameBytes";
-import { Factory as FactoryContract } from "../../../generated/templates/Pair/Factory";
+import { BEP20 } from "../../../../generated/Factory/BEP20";
+import { BEP20SymbolBytes } from "../../../../generated/Factory/BEP20SymbolBytes";
+import { BEP20NameBytes } from "../../../../generated/Factory/BEP20NameBytes";
+import { Factory as FactoryContract } from "../../../../generated/templates/Pair/Factory";
 
 export let ADDRESS_ZERO = "0x0000000000000000000000000000000000000000";
 export let FACTORY_ADDRESS = "0xca143ce32fe78f1f7019d7d551a6402fc5350c73";
